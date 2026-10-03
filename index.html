@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>website sapikxie!</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #f3dfe3, #fceff2);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 40px 20px;
+            color: #5c454c;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .subjudul {
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .foto {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(120, 80, 90, 0.2);
+            margin-top: 10px;
+            max-width: 90%;
+        }
+
+        .karakter {
+            font-size: 45px;
+            margin: 25px 0 10px 0;
+            animation: melayang 2s ease-in-out infinite;
+        }
+
+        @keyframes melayang {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .kotak-text {
+            background-color: rgba(255, 255, 255, 0.65);
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(120, 80, 90, 0.15);
+            text-align: left;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .hati {
+            font-size: 25px;
+            animation: hati 2s ease-in-out infinite;
+        }
+
+        @keyframes hati {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>allooowww, kamu? iyaa kamu!</h1>
+
+    <p class="subjudul">selamat datang disinii.</p>
+
+    <img src="foto.jpeg" class="foto">
+
+    <div class="karakter">
+        ૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა
+    </div>
+
+    <div class="hati">
+        ♡
+    </div>
+
+    <div class="kotak-text">
+        <div id="eyyaa"></div>
+    </div>
+
+    <script>
+
+        let text = "allow bespren gua yangg sekarang beda sekolah, ga terasa yaa kita kenal udah mau dua tahun ajaa tapi selama kita kenal gua belum ada titik dimana gua benci/kesel sama lu, semoga jangan si. gua gatau mau bilang apa karna ud stres duluan mikiri code nya tapi yah pasti, gua ada disini jangan gengsian sama gua, lo boleh lakuin apapun itu hal yang mau lo lakuin ke gua. nanti gua pun bakal memperlakukan lo begitu juga, udah ahh segitu ajaa. see u babe🤍🫂";
+
+        let i = 0;
+
+        function ketik() {
+
+            if (i < text.length) {
+
+                document.getElementById("eyyaa").innerHTML += text.charAt(i);
+
+                i++;
+
+                setTimeout(ketik, 50);
+            }
+        }
+
+        ketik();
+
+    </script>
+
+</body>
+
+</html>
